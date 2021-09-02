@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let listaNumeros = [20, 33, 45, 12, 11, 23];
+
+        listaNumeros.forEach(Number => {
+            if (Number % 2 == 0){
+                console.log(`El numero ${Number} es par, y su resultado final es: ${Number + 5}`)
+            }else{
+                console.log(`El numero ${Number} es NO-par, y su resultado final es: ${Number - 5}`)
+            }
+        });
+
+        //listaNumeros.forEach((elNumero)=>console.log(elNumero+((elNumero%2==0)?5:-5)));
+
+    </script>
+
+</body>
+
+</html>

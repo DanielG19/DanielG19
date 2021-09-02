@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>To-Do List</title>
+    <link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Bowlby+One+SC" rel="stylesheet">
+    <style>
+        body {
+            background-color: rgb(37, 37, 37);
+            color: aliceblue;
+            padding: 2rem;
+            margin: 0;
+            font-family: 'Architects Daughter', cursive;
+            font-size: 12px;
+        }
+
+        h1 {
+            font-family: 'Bowlby One SC', cursive;
+            font-size: 2.8rem;
+            color: cornflowerblue;
+            margin: 0;
+        }
+
+        ol {
+            font-family: 'Architects Daughter', cursive;
+            font-size: 1.6rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>To-Do List</h1>
+    <ol id="todolist">
+        <li>Wash Laundry</li>
+        <li>Clean Silver</li>
+        <li>Write Letters</li>
+        <li>Purchase Groceries</li>
+        <li>Retrieve Mail</li>
+        <li>Prepare Dinner</li>
+    </ol>
+    <script>
+        var mylist = document.getElementById("todolist");
+        console.log("Beggining count of list: " + mylist.children.length);
+        var newcomponent = document.createElement('li');
+        newcomponent.innerText = "New Element from JavaScript";
+        mylist.appendChild(newcomponent);
+        mylist.lastChild.style.color = "crimson";
+        console.log("Beggining count of list: " + mylist.children.length);
+
+        listItems = document.getElementsByTagName("li");
+
+        var flag = 0;
+        for (let i = 0; i < mylist.childElementCount; i++) {
+            if (flag == 0) {
+                mylist.children[i].style.color = "green";
+                //listItems[i].style.color = "blue";
+                flag = 1;
+            } else {
+                listItems[i].style.color = "crimson";
+                flag = 0;
+            }
+        }
+
+    </script>
+</body>
+
+</html>
